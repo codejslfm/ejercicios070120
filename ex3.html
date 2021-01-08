@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        /*Realizar un programa que implemente 6 operaciones básicas de una calculadora: suma, resta, producto, división, potencia y raíz cuadrada. Mostrar en pantalla el siguiente menú:
+*****************
+ Calculadora
+*****************
+1. Suma
+2. Resta
+3.Multiplicación
+4.Potencia
+5.. División
+6. Raíz
+7.Salir
+Introduce la opción deseada:
+En función de la opción introducida por el usuario, se realizará lo siguiente: 	
+Opciones entre 1 y 6: en todos ellos se solicitará introducir dos números por teclado y se realizará la operación matemática indicada por el número de opción de menú.  En pantalla se mostrará lo siguiente:
+            Operación seleccionada: nombre operación en texto
+              Operando1 operación Operando2 = resultado
+            Ejemplo:
+            Operación seleccionada: Suma
+            5+1=6
+Hasta que se pulse el número 7, la calculadora estará ejecutándose constantemente. Una vez realizada 	una operación, el menú volverá a mostrarse para que el usuario pueda seleccionar una nueva opción.
+Si selecciona la opción 7, el programa terminará.
+Si se pulsa un número fuera del rango del 	1 al 7, se mostrará un mensaje por pantalla: Opción 	X no disponible, vuelva a intentarlo.  A continuación, volver a mostrar el menú para que pueda continuar.*/
+
+ let opcio;
+        do {
+            opcio = parseInt(prompt(" Selecciona una opción\n 1.Suma\n 2.Resta\n 3.Multiplicación\n 4.Potencia\n 5.División\n 6. Raiz\n 7.Salir"));
+
+            switch (opcio) {
+                case 1:
+
+                    let suma1 = parseInt(prompt("Escribe un número "));
+                    let suma2 = parseInt(prompt("Escribe otro número "));
+                    let total = (suma1 + suma2);
+                    alert(`El total de la suma es ${total}`);
+                    break;
+                case 2:
+
+                    let resta1 = parseInt(prompt("Escribe un número "));
+                    let resta2 = parseInt(prompt("Escribe otro número "));
+                    let total1 = (resta1 - resta2);
+                    document.writeln(`El total de la resta es ${total1}`);
+                    break;
+                case 3:
+
+                    let multi1 = parseInt(prompt("Escribe un número "));
+                    let multi2 = parseInt(prompt("Escribe otro número "));
+                    let total2 = (multi1 * multi2);
+                    document.writeln(`El total de la multiplicación es ${total2}`);
+                    break;
+                case 4:
+
+                    let num = parseInt(prompt("Escribe una base "));
+                    let poten = parseInt(prompt("Escribe el exponente "));
+                    let total3 = Math.pow(num, poten);
+                    document.writeln(`El total de la potencia es ${total3}`);
+                    break;
+                case 5:
+
+                    let divi1 = parseInt(prompt("Escribe un número "));
+                    let divi2 = parseInt(prompt("Escribe otro número "));
+                    let total4 = (divi1 / divi2);
+                    document.writeln(`El total de la potencia es ${total4}`);
+                    break;
+
+                case 6:
+
+                    let raiz = parseInt(prompt("Escribe un número "));
+                    let total5 = Math.sqrt(raiz);
+                    document.writeln(`La raiz cuadrada es ${total5}`);
+                    break;
+
+                case 7:
+
+                    document.writeln(`Agur. Hasta pronto`);
+                    break;
+
+
+
+
+                default:
+                    break;
+
+            }
+        } 
+        while (opcio < 7);
+
+
+    </script>
+</body>
+
+</html>

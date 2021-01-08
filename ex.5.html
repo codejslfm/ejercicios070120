@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        /*Hacer un programa que pida nombres al usuario y los guarde en un array. 
+        Cuando el usuario no quiera meter más nombres, que deje de preguntar por nombres y pregunte un número. 
+        Ese número será el número de integrantes que formará un grupo. Hacer grupos con todos los usuarios en función del número de integrantes. 
+        Si hay alguno descolgado o sin grupo, indicarlo. Los nombres deben ser escogidos de modo aleatorio dentro de ese array. 
+        El array debe ir eliminando los nombres que se usen para formar cada grupo*/
+
+        let namesArray = [];
+        let exit = false;
+        do{
+            let name = prompt('Introduce un nombre: (Si te cansas, introduce #)');
+            if(name === "#"){
+                exit = true;
+            }
+            else {
+                namesArray.push(name);
+            }
+        }while(exit == false);
+        let number = parseInt(prompt("Introduce un número:"));
+        while(namesArray.length >= number){
+            let groupNames = "";
+            for(let i = 0; i<number; i++){
+                let randomPos = Math.floor(Math.random()*namesArray.length);
+                let randomPosName = namesArray[randomPos];
+                namesArray.splice(randomPos,1);
+                groupNames += randomPosName + " ";
+            }
+            console.log(groupNames);
+        }
+        for(let j = 0; j < namesArray.length; j++){
+            console.log(namesArray[j]);
+        }
+
+
+
+
+    </script>
+</body>
+
+</html>
