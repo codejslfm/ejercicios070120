@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*Mostrar en pantalla una pirámide hecha con un símbolo. 
+        El usuario introduce el símbolo que se usa y un valor que indica la altura en líneas de la pirámide. 
+        Por ejemplo si el usuario introduce # y 7 el resultado será:*/
+
+        let inline = "";
+        let num = parseInt(prompt("Dame un numero"));
+        let char = prompt("Dame un caracter");
+        let chars = "";
+        let totalLines = num*2-1;
+        for(let i = 1; i <= totalLines; i = i+2){
+            for(let j = 0; j < num-1; j++){
+                inline += " ";
+            }
+            for(let k = 1; k <= i; k++){
+                chars += char;
+            }
+            let str = inline += chars;
+            console.log(str);
+            chars = "";
+            inline ="";
+            num--;
+        }
+       
+    </script>
+</body>
+</html>
